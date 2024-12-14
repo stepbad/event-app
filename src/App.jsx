@@ -18,14 +18,14 @@ function App() {
 
   // Fetch events from server
   const fetchEvents = async () => {
-    const res = await fetch("http://localhost:5001/events");
+    const res = await fetch("http://localhost:3000/events");
     const data = await res.json();
     return data;
   };
 
   // Add new event
   const addEvent = async (event) => {
-    const res = await fetch("http://localhost:5001/events", {
+    const res = await fetch("http://localhost:3000/events", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -39,7 +39,7 @@ function App() {
 
   // Edit existing event
   const editEvent = async (updatedEvent) => {
-    const res = await fetch(`http://localhost:5001/events/${updatedEvent.id}`, {
+    const res = await fetch(`http://localhost:3000/events/${updatedEvent.id}`, {
       method: "PUT",
       headers: {
         "Content-type": "application/json",
@@ -58,7 +58,7 @@ function App() {
 
   // Delete event
   const deleteEvent = async (id) => {
-    await fetch(`http://localhost:5001/events/${id}`, { method: "DELETE" });
+    await fetch(`http://localhost:3000/events/${id}`, { method: "DELETE" });
     setEvents(events.filter((event) => event.id !== id));
   };
 

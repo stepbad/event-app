@@ -8,32 +8,62 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #f8f9fa; /* Light background for modern look */
-  color: #333;
+  background: black;
+  color: #fff;
   line-height: 1.6;
 }
 
 .container {
   max-width: 600px;
   margin: 40px auto;
-  min-height: 400px;
-  background: #ffffff;
+  min-height: 600px;
+  background: rgba(70, 70, 70, 0.6);
+  color: #fff;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 10px rgba(200, 200, 200, 0.9);
   overflow: auto;
 }
 
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  color: #fff;
   margin-bottom: 20px;
 }
 
+.gradient-text {
+  font-size: 4rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align:justify;
+  animation: gradient-move 5s infinite;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.addButton {
+  padding-right: 40px;
+  height : 100px;
+}
+
+
 .btn {
-  display: inline-block;
   background-color: #007bff; /* Modern blue */
+  box-shadow: 0px 4px 10px rgba(200, 200, 200, 0.5);
+
   color: #fff;
   border: none;
   padding: 12px 20px;
@@ -57,11 +87,12 @@ body {
 }
 
 .event {
-  background: #f9f9f9;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
   margin: 10px 0;
   padding: 15px 20px;
   border-radius: 8px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 10px rgba(200, 200, 200, 0.5);
   transition: all 0.3s ease-in-out;
 }
 .event:hover {
@@ -86,7 +117,7 @@ body {
   margin: 20px 0;
   padding: 20px;
   border-radius: 10px;
-  background: #ffffff;
+  background: rgba(0, 0, 0, 0.6);
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 

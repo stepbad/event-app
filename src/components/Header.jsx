@@ -8,11 +8,11 @@ const Header = ({ title, onAdd, showAdd }) => {
   // };
   return (
     <header className="header">
-      <h1>
-        <FaBell style={{ color: "black" }} />
+      <h1 class="gradient-text">
+        <FaBell style={{ color: "gold" }} />
         {title}
       </h1>
-      <Button
+      <Button className="addButton"
         text={showAdd ? "Close" : "Add"}
         color={showAdd ? "red" : "green"}
         click={onAdd}
